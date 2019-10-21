@@ -69,7 +69,8 @@ const players: Array<Player> = [
 
 
 interface PlayerItemProps {
-    player: Player
+    player: Player,
+    navigation: any
 }
 
 
@@ -80,7 +81,7 @@ const PlayerItem: React.FC<PlayerItemProps> = (props) => {
     let playerName: string = props.player.name.first + " " + props.player.name.last;
 
     return (
-        <TouchableOpacity onPress={() => alert("You clicked on " + playerName) }>
+        <TouchableOpacity onPress={() => props.navigation.navigate('PlayerDetails', { itemID: props.player.id, player: props.player }) }>
   
             <View style={styles.itemContainer}>
                 
@@ -109,7 +110,7 @@ const PlayersScreen = () => {
     return (
         <View>
             <ScrollView style={styles.container}>
-                <FlatList data={players} keyExtractor={(item: Player) => item.id} renderItem={(item) => <PlayerItem player={item.item} />} >
+                <FlatList data={players} keyExtractor={(item: Player) => item.id} renderItem={(item) => <PlayerItem player={item.item} navigation={navigation} />} >
                 </FlatList>
             </ScrollView>
         </View>
@@ -123,7 +124,7 @@ PlayersScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
     container: {
-        margin: 5
+        margin: 5   
     },
     itemContainer: {
         flexDirection: "row",

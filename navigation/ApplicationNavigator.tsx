@@ -6,6 +6,7 @@ import PlayersScreen from '../screens/PlayersScreen';
 import AboutScreen from '../screens/AboutScreen';
 import TabBarIcon from '../components/TabBarIcon/TabBarIcon';
 import { Platform } from 'react-native';
+import PlayerDetailsScreen from '../screens/PlayerDetailsScreen';
 
 
 const MainTabNavigator = createBottomTabNavigator({
@@ -28,7 +29,14 @@ const MainTabNavigator = createBottomTabNavigator({
         }
     },
     Players: {
-        screen: createStackNavigator({ Players: PlayersScreen}),
+        screen: createStackNavigator({ 
+            Players: {
+                screen: PlayersScreen
+            },
+            PlayerDetails: {
+                screen: PlayerDetailsScreen
+            }
+        }),
         navigationOptions: {
             tabBarLabel: 'Players',
             tabBarIcon: ({ focused }) => (
