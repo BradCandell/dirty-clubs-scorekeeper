@@ -16,7 +16,10 @@
    version="1.1"
    id="svg3452"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="icon.svg">
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="C:\Development\GitHub\dirty-clubs-scorekeeper\assets\icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs3446">
     <clipPath
@@ -4582,7 +4585,7 @@
      inkscape:pageopacity="0.65882353"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="-110.45278"
+     inkscape:cx="250.57906"
      inkscape:cy="68.998752"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -4602,7 +4605,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
